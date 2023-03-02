@@ -6,15 +6,22 @@
   :root {
     --rose: rgb(245, 211, 211);
     --black: rgb(107, 96, 96);
+    --lighterp: rgb(240, 217, 221);
+    --lighterb: rgb(184, 175, 175);
   }
 
   header {
-    background: linear-gradient(to bottom right, var(--rose), var(--black));;
+    background: linear-gradient(to bottom right, var(--rose), var(--lighterb));;
     padding: 15px 30px 15px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
+@keyframes header {
+    from {background-color: black;}
+    to {background-color: linear-gradient(to bottom right, var(--rose), var(--lighterb));}
+  }
 
 nav a {
     text-decoration: none;
@@ -25,9 +32,12 @@ nav a {
     font-size: medium;
 }
 
+nav a:hover {
+    background-color: var(--lighterb);
+}
+
 .button {
-    background-color: var(--black);
-    border:none;
+    border-radius: 28px;;
     padding: 5px 4px;
     text-align: center;
     text-decoration: none;
@@ -45,6 +55,13 @@ nav a {
     font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
     color: var(--black);
+    animation-name: hero;
+    animation-duration: 2s;
+  }
+
+  @keyframes hero {
+    from {opacity: 0;}
+    to {opacity: .5}
   }
 
 
@@ -70,7 +87,86 @@ footer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 200;
-    height: 300;
+    width: 300px;
+    height: 300px;
     float: center;
+    padding-left: 10px 5 10 5;
 }
+
+.header2 {
+    background: linear-gradient(to bottom right, var(--lighterp), var(--lighterb));
+    padding: 15px 30px 15px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+
+.move {
+    width: 100px;
+    height: 50px;
+    background-color: var(--rose);
+    font-weight: bold;
+    position: relative;
+    animation: mymove 50s infinite;
+    animation-direction: alternate;
+  }
+  
+#movee {animation-timing-function: linear;}
+
+@keyframes mymove {
+    from {left: 300px;}
+    to {left: 800px;}
+  }
+
+.htmlcss {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    color: var(--rose);
+  }
+  
+  htmlcss h1 {
+    text-align: center;
+  }
+  
+  .htmlcss-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--black);
+    border: 2px solid var(--black);
+    min-height: 200px;
+    min-width: 300px;
+    margin: 20px;
+    transition: all 0.5s;
+    text-decoration: none;
+  }
+
+  .card div {
+    margin-top: 50%;
+    color: white;
+    text-align: center;
+    background-color: black;
+    opacity: 60%;
+    width: 100%;
+  }
+
+  .card:hover {
+    background-color: var(--rose);
+    transition: .8s ease;
+    box-shadow: 0 5px 10px 0 black(0, 0, 0, 0.2), 0 6px 20px 0 black(0, 0, 0, 0.19);
+  }
+
+  .horiseon {
+    background-size: cover;
+    background-position: center;
+    background-image: url("../images/horiseon.png");
+    
+  }
