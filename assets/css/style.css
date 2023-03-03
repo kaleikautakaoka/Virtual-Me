@@ -74,6 +74,11 @@ h1 {
     font-size: large;  
 }
 
+.projecth {
+  text-decoration: none;
+  display: block;
+}
+
 .mypic img {
     width: 250px;
     float: left;
@@ -141,7 +146,25 @@ footer {
   }
 
   .horiseon {
+    width: 400px;
     background-size: cover;
     background-position: center;
     background-image: url("../images/horiseon.png");
   }
+
+  .horiseon2 {
+    background-size: cover;
+    background-position: center;
+    background-image: url("../images/horiseon.png");
+  }
+
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  
+    main {
+      max-width: 1200px;
+    }
+  }
+  
