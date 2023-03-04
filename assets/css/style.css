@@ -87,17 +87,18 @@ h1 {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
+  background-color: var(--lighterp);
 }
 
 .mypic img {
     width: 150px;
     float: left;
+    opacity: .8;
+    border-radius: 75px;
 }
   .card div {
     margin-top: 50%;
     color: white;
-    border-radius: 5px;
-    border-color: black;
     text-align: center;
     background-color: black;
     opacity: 60%;
@@ -112,22 +113,36 @@ h1 {
   }
 
   .horiseon {
-    width: 200px;
+    width: 180px;
     background-size: cover;
     background-position: center;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: var(--lighterb);
     background-image: url("../images/horiseon.png");
   }
 
   .password {
     background-size: cover;
     background-position: center;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: var(--lighterb);
     background-image: url("../images/pass-gen.png");
   }
 
   .d2e {
     background-size: cover;
     background-position: center;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: var(--lighterb);
     background-image: url("../images/donate.png");
+  }
+
+  .spanand {
+    border-style: none;
+    border-radius: 70px;
   }
 
   .mystory {
@@ -140,21 +155,6 @@ h1 {
     font-size: 20px;
   }
 
-  #Contactme {
-    display: inline;
-    flex-direction: row;
-    text-decoration: none;
-    padding: 10px 20px;
-    color: var(--black);
-    transition: all .20s ease-in;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-  }
-
-  footer {
-    display: inline;
-    padding: 30px 30px;
-  }
 
   @media screen and (max-width: 768px) {
     header {
