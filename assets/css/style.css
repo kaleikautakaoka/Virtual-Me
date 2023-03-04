@@ -78,22 +78,21 @@ h1 {
   display: flex;
   justify-content: center;
   text-decoration: none;
-  padding: 10px 20px;
   color: var(--black);
   font-family: 'Times New Roman', Times, serif;
-  font-size: 40px;
+  font-size: 30px;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .mypic img {
     width: 250px;
     float: left;
 }
-
-  .htmlcss-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
   .card div {
     margin-top: 50%;
     color: white;
@@ -131,7 +130,7 @@ h1 {
     background-image: url("../images/donate.png");
   }
 
-  .about-info {
+  .mystory {
     display: inline;
     flex-direction: row;
     text-decoration: none;
