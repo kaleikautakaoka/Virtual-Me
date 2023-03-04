@@ -94,15 +94,16 @@ h1 {
     width: 150px;
     float: left;
     opacity: .8;
-    border-radius: 75px;
+    border-radius: 80px;
 }
   .card div {
     margin-top: 50%;
+    margin-bottom: 50%;
     color: white;
     text-align: center;
-    background-color: black;
     opacity: 60%;
     width: 100%;
+    height: 60px;
   }
 
   .card:hover {
@@ -117,7 +118,7 @@ h1 {
     background-size: cover;
     background-position: center;
     border-style: solid;
-    border-radius: 30px;
+    border-radius: 10px;
     border-color: var(--lighterb);
     background-image: url("../images/horiseon.png");
   }
@@ -126,7 +127,7 @@ h1 {
     background-size: cover;
     background-position: center;
     border-style: solid;
-    border-radius: 30px;
+    border-radius: 10px;
     border-color: var(--lighterb);
     background-image: url("../images/pass-gen.png");
   }
@@ -135,14 +136,22 @@ h1 {
     background-size: cover;
     background-position: center;
     border-style: solid;
-    border-radius: 30px;
+    border-radius: 10px;
     border-color: var(--lighterb);
     background-image: url("../images/donate.png");
   }
 
   .spanand {
+    display: flex;
+    align-self: center;
     border-style: none;
-    border-radius: 70px;
+    border-radius: 10px;
+    background-color: black;
+  }
+
+  .about-me {
+    display: flex;
+    align-items: flex-end;
   }
 
   .mystory {
@@ -154,6 +163,21 @@ h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
   }
+
+  .contactme a {
+    display: inline;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding-bottom: 60px;
+    color: var(--black);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  /*media screen added to allow the page to fit most cell phone screens*/
 
 
   @media screen and (max-width: 768px) {
