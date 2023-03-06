@@ -2,15 +2,16 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
   }
-/*variables set to reuse colors*/
+/*Variables set to reuse colors*/
   :root {
     --rose: rgb(236, 218, 218);
     --dark: rgb(136, 131, 131);
+    --darker: rgb(92, 89, 89);
     --lighterp: rgb(228, 190, 196);
     --lighterb: rgb(151, 91, 91);
   }
 
-  /*header with nav bar in it*/
+  /*Header with Nav bar styling*/
   header {
     padding: 15px;
     padding: 15px 30px 15px 30px;
@@ -31,13 +32,13 @@
     color: var(--lighterp);
 }
 
-/*nav bar layout*/
+/*Nav bar layout*/
   nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-/*href styling*/
+/*Href styling*/
 nav a {
     text-decoration: none;
     padding: 5px 12px;
@@ -58,7 +59,7 @@ nav a:hover {
     text-decoration: none;
 }
 
-/*herobanner*/
+/*Herobanner*/
 .hero-banner .ptag {
     background-image: url("../images/comuterpic.jpg");
     height: 600px;
@@ -77,6 +78,7 @@ nav a:hover {
     to {opacity: .5}
   }
 
+  /*Styling for projects and section*/
 .project-class {
   display: flex;
   justify-content: center;
@@ -90,14 +92,7 @@ nav a:hover {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  background-color: var(--lighterp);
-}
-
-.mypic img {
-    width: 150px;
-    float: left;
-    opacity: .8;
-    border-radius: 80px;
+  background-color: var(--rose);
 }
   .card div {
     margin-top: 50%;
@@ -116,13 +111,14 @@ nav a:hover {
     opacity: .5;
   }
 
+  /*Projects*/
   .horiseon {
     width: 180px;
     background-size: cover;
     background-position: center;
     border-style: solid;
     border-radius: 10px;
-    border-color: var(--lighterb);
+    border-color: var(--dark);
     background-image: url("../images/horiseon.png");
   }
 
@@ -131,7 +127,7 @@ nav a:hover {
     background-position: center;
     border-style: solid;
     border-radius: 10px;
-    border-color: var(--lighterb);
+    border-color: var(--dark);
     background-image: url("../images/pass-gen.png");
   }
 
@@ -140,10 +136,11 @@ nav a:hover {
     background-position: center;
     border-style: solid;
     border-radius: 10px;
-    border-color: var(--lighterb);
+    border-color: var(--dark);
     background-image: url("../images/donate.png");
   }
 
+  /*Gray area infront of projects that gives them the title*/
   .spanand {
     display: flex;
     align-self: center;
@@ -151,6 +148,14 @@ nav a:hover {
     border-radius: 10px;
     background-color: black;
   }
+
+/*About me section with my picture*/
+  .mypic img {
+    width: 150px;
+    float: left;
+    opacity: .8;
+    border-radius: 80px;
+}
 
   .about-me {
     display: flex;
@@ -162,23 +167,45 @@ nav a:hover {
     flex-direction: row;
     text-decoration: none;
     padding-bottom: 60px;
-    color: var(--black);
+    color: var(--darker);
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
   }
 
+/*Contact me section*/
+h2 {
+  text-decoration: none;
+  color: var(--darker);
+}
+
+h4 {
+  text-decoration: none;
+  color: var(--darker);
+}
   .contactme a {
     display: inline;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    transition: all .20s ease-in;
     text-decoration: none;
     padding-bottom: 60px;
-    color: var(--black);
+    color: var(--darker);
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     width: 100%;
   }
+
+  .contactme a:hover {
+    background-color: var(--lighterp);
+}
+
+.button {
+    border-radius: 20px;;
+    padding: 5px 4px;
+    text-align: center;
+    text-decoration: none;
+}
 
   /*media screen added to allow the page to fit most cell phone screens*/
 
