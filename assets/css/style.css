@@ -2,38 +2,53 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
   }
-
+/*variables set to reuse colors*/
   :root {
-    --rose: rgb(245, 211, 211);
-    --black: rgb(107, 96, 96);
-    --lighterp: rgb(240, 217, 221);
-    --lighterb: rgb(184, 175, 175);
+    --rose: rgb(236, 218, 218);
+    --dark: rgb(136, 131, 131);
+    --lighterp: rgb(228, 190, 196);
+    --lighterb: rgb(151, 91, 91);
   }
 
+  /*header with nav bar in it*/
   header {
-    background: linear-gradient(to bottom right, var(--rose), var(--lighterb));;
+    padding: 15px;
     padding: 15px 30px 15px 30px;
+    color: var(--dark);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+    flex-wrap: wrap;
+    align-items: center;
+  }
 
-@keyframes header {
-    from {background-color: black;}
+  @keyframes header {
+    from {background-color:var(--lighterb);}
     to {background-color: linear-gradient(to bottom right, var(--rose), var(--lighterb));}
   }
 
+  header h1 {
+    color: var(--lighterp);
+}
+
+/*nav bar layout*/
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+/*href styling*/
 nav a {
     text-decoration: none;
     padding: 5px 12px;
-    color:beige;
+    color: var(--dark);
     transition: all .20s ease-in;
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
 }
 
 nav a:hover {
-    background-color: var(--lighterb);
+    background-color: var(--lighterp);
 }
 
 .button {
@@ -41,11 +56,9 @@ nav a:hover {
     padding: 5px 4px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: ;
 }
 
+/*herobanner*/
 .hero-banner .ptag {
     background-image: url("../images/comuterpic.jpg");
     height: 600px;
@@ -54,7 +67,7 @@ nav a:hover {
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
-    color: var(--black);
+    color: var(--dark);
     animation-name: hero;
     animation-duration: 2s;
   }
@@ -63,16 +76,6 @@ nav a:hover {
     from {opacity: 0;}
     to {opacity: .5}
   }
-
-
-h1 {
-    text-decoration: none;
-    padding: 10px 20px;
-    color: var(--black);
-    transition: all .20s ease-in;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: large;  
-}
 
 .project-class {
   display: flex;
