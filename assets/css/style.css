@@ -5,7 +5,7 @@
 /*Variables set to reuse colors*/
   :root {
     --rose: rgb(236, 218, 218);
-    --dark: rgb(136, 131, 131);
+    --dark: rgb(4, 0, 0);
     --darker: rgb(92, 89, 89);
     --lighterp: rgb(228, 190, 196);
     --lighterb: rgb(151, 91, 91);
@@ -78,32 +78,6 @@ nav a:hover {
     to {opacity: .5}
   }
 
-  /*Styling for projects and section*/
-.project-class {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  color: var(--black);
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 30px;
-}
-
-.project-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  background-color: var(--rose);
-}
-  .card div {
-    margin-top: 50%;
-    margin-bottom: 50%;
-    color: white;
-    text-align: center;
-    opacity: 60%;
-    width: 100%;
-    height: 60px;
-  }
-
   .card:hover {
     background-color: var(--rose);
     transition: .8s ease;
@@ -115,31 +89,13 @@ nav a:hover {
   .horiseon {
     width: 180px;
     background-size: cover;
-    background-position: center;
+    background-position: left;
     border-style: solid;
-    border-radius: 10px;
+    border-radius: 5px;
     border-color: var(--dark);
     background-image: url("../images/horiseon.png");
   }
-
-  .password {
-    background-size: cover;
-    background-position: center;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: var(--dark);
-    background-image: url("../images/pass-gen.png");
-  }
-
-  .d2e {
-    background-size: cover;
-    background-position: center;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: var(--dark);
-    background-image: url("../images/donate.png");
-  }
-
+  
   /*Gray area infront of projects that gives them the title*/
   .spanand {
     display: flex;
@@ -148,20 +104,20 @@ nav a:hover {
     border-radius: 10px;
     background-color: black;
   }
-
-/*About me section with my picture*/
+  
+  /*About me section with my picture*/
   .mypic img {
     width: 150px;
     float: left;
     opacity: .8;
     border-radius: 80px;
-}
-
+  }
+  
   .about-me {
     display: flex;
     align-items: flex-end;
   }
-
+  
   .mystory {
     display: inline;
     flex-direction: row;
@@ -171,17 +127,17 @@ nav a:hover {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
   }
-
-/*Contact me section*/
-h2 {
-  text-decoration: none;
-  color: var(--darker);
-}
-
-h4 {
-  text-decoration: none;
-  color: var(--darker);
-}
+  
+  /*Contact me section*/
+  h2 {
+    text-decoration: none;
+    color: var(--darker);
+  }
+  
+  h4 {
+    text-decoration: none;
+    color: var(--darker);
+  }
   .contactme a {
     display: inline;
     flex-direction: row;
@@ -195,28 +151,111 @@ h4 {
     font-size: 20px;
     width: 100%;
   }
-
+  
   .contactme a:hover {
     background-color: var(--lighterp);
-}
-
-.button {
+  }
+  
+  .button {
     border-radius: 20px;;
     padding: 5px 4px;
     text-align: center;
     text-decoration: none;
-}
-
-  /*media screen added to allow the page to fit most cell phone screens*/
-
-
-  @media screen and (max-width: 768px) {
-    header {
-      flex-direction: column;
-    }
-  
-    main {
-      max-width: 1200px;
-    }
   }
   
+  .project-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    color: #6178b6;
+  }
+  
+  .project-section h1 {
+    text-align: center;
+  }
+  
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: space-evenly;
+    color: #6178b6;
+    border: 2px solid #6178b6;
+    background-color: lightblue;
+    min-height: 200px;
+    min-width: 300px;
+    margin: 20px;
+    transition: all 0.5s;
+    text-decoration: none;
+  }
+
+.card:hover {
+  background-color: #e6d7ad;
+  transition: .5s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.card div {
+  margin-top: 50%;
+  color: white;
+  text-align: center;
+  background-color: black;
+  opacity: 60%;
+  width: 100%;
+}
+
+/* Portfolio Section Images */
+.horiseon {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/horiseon.png");
+  
+}
+
+.password-generator {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/pass-gen.png");
+}
+
+.d2e {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/donate.png");
+}
+
+
+.code-quiz {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/whizQscreens.png");
+}
+
+.pro2 {
+  background-size: cover;
+  background-position: right;
+  background-image: url("../images/chatcamp.png");
+}
+/*media screen added to allow the page to fit most cell phone screens*/
+
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  
+  main {
+    max-width: 1200px;
+  }
+}
